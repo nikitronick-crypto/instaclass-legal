@@ -39,7 +39,7 @@
 <body>
 
 <h1>Política de privacidad de InstaClass</h1>
-<p class="fecha">Última actualización: 28 de agosto de 2026</p>
+<p class="fecha">Última actualización: 31 de agosto de 2026</p>
 
 <p>InstaClass convierte un documento en una presentación de PowerPoint. Esta
 página explica exactamente qué información se maneja para que eso funcione,
@@ -108,7 +108,12 @@ cuenta anónima sola la primera vez que la abres.</p>
 <ul>
   <li><strong>Google (Gemini).</strong> El texto de tu documento se envía a la
       API de Gemini de Google para redactar el contenido de las diapositivas.
-      Google lo procesa para devolver esa respuesta.</li>
+      Google lo procesa para devolver esa respuesta. Es el proveedor
+      principal: salvo que falle, es el único que ve tu documento.</li>
+  <li><strong>Groq.</strong> Proveedor de respaldo. Si Gemini no responde
+      —una caída o una saturación del servicio—, el texto de tu documento se
+      envía a la API de Groq para la misma tarea, y solo para eso. No se le
+      envía tu identificador ni ningún otro dato tuyo.</li>
   <li><strong>Supabase.</strong> Aloja la base de datos donde viven el
       identificador anónimo y los contadores de uso.</li>
   <li><strong>Google Play.</strong> Procesa los pagos. Nosotros nunca vemos ni
